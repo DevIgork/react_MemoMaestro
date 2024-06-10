@@ -1,0 +1,10 @@
+{
+    "search_placeholder": "Введіть для пошуку...",
+    "add_note_placeholder": "Введіть, щоб додати нотатку...",
+    "save_button": "Зберегти",
+    "remaining_characters": "Залишилось {{count}}",
+    "error_fetching_notes": "Помилка при отриманні нотаток:",
+    "cancel_button" : "Відмінити",
+    "lower_text_placeholder" : "Ваш менеджер нотаток"
+  }
+  

@@ -1,0 +1,10 @@
+{
+    "search_placeholder": "Type to search...",
+    "add_note_placeholder": "Type to add a note...",
+    "save_button": "Save",
+    "remaining_characters": "{{count}} Remaining",
+    "error_fetching_notes": "Error fetching notes:",
+    "cancel_button" : "cancel",
+    "lower_text_placeholder" : "Your note manager"
+  }
+  
