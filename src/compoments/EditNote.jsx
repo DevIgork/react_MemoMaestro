@@ -3,19 +3,19 @@ import { useTranslation } from 'react-i18next';
 
 const EditNote = ({ id, currentText, handleEditNote, handleCancelEdit }) => {
   const { t } = useTranslation();
-  const [noteText, setNoteText] = useState(currentText);
+  const [noteRecord, setNoteRecord] = useState(currentText);
   const characterLimit = 250;
 
   const handleChange = (event) => {
     if (characterLimit - event.target.value.length >= 0) {
-      setNoteText(event.target.value);
+      setNoteRecord(event.target.value);
     }
   };
 
   const handleSaveClick = () => {
-    if (noteText.trim().length > 0) {
-      handleEditNote(id, noteText);
-      setNoteText(noteText)
+    if (noteRecord.trim().length > 0) {
+      handleEditNote(id, noteRecord);
+      setNoteRecord(noteRecord)
       handleCancelEdit();
     }
   };
@@ -26,11 +26,11 @@ const EditNote = ({ id, currentText, handleEditNote, handleCancelEdit }) => {
         rows="8"
         cols="10"
         placeholder={t("edit_note_placeholder")}
-        value={noteText}
+        value={noteRecord}
         onChange={handleChange}
       ></textarea>
       <div className="note-footer">
-        <small>{t("remaining_characters", { count: characterLimit - noteText.length })}</small>
+        <small>{t("remaining_characters", { count: characterLimit - noteRecord.length })}</small>
         <button className="cancel" onClick={handleCancelEdit}>{t("cancel_button")}</button>
         <button className="save" onClick={handleSaveClick}>{t("save_button")}</button>
       </div>
